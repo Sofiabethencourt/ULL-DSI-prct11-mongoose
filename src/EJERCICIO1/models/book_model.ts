@@ -1,11 +1,18 @@
 import {Document, Schema, model} from 'mongoose';
 import validator from 'validator';
 
+/**
+ * Interfaz que define la estructura de un documento de libro en MongoDB.
+ * Incluye validaciones para cada campo según los requisitos del modelo.
+ */
 export interface Filter {
-    genre?: string;
-    author?: string;
+    genre: string;
+    author: string;
 }
 
+/**
+ * Interfaz que extiende Document de Mongoose para definir los campos de un libro.
+ */
 interface BookDocument extends Document {
     title: string;
     author: string;
